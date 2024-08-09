@@ -1,0 +1,1676 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="Commands" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Commands">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="SearchTag" type="xs:string" />
+                <xs:element name="TargetID" type="xs:string" minOccurs="0" />
+                <xs:element name="SenderID" type="xs:string" minOccurs="0" />
+                <xs:element name="MsgValue" type="xs:string" minOccurs="0" />
+                <xs:element name="MsgName" type="xs:string" minOccurs="0" />
+                <xs:element name="PackLen" type="xs:string" minOccurs="0" />
+                <xs:element name="DataNames" type="xs:string" minOccurs="0" />
+                <xs:element name="DataTypes" type="xs:string" minOccurs="0" />
+                <xs:element name="DataSizes" type="xs:string" minOccurs="0" />
+                <xs:element name="DataDetails" type="xs:string" minOccurs="0" />
+                <xs:element name="DefaultData" type="xs:string" minOccurs="0" />
+                <xs:element name="IsBootModeCmd" type="xs:string" minOccurs="0" />
+                <xs:element name="DuplicateCmd" type="xs:string" minOccurs="0" />
+                <xs:element name="CmdNotes" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//Commands" />
+        <xs:field xpath="SearchTag" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  
+
+
+
+
+
+  <Commands>
+    <SearchTag>80:F0:35</SearchTag>
+    <TargetID>80</TargetID>
+    <SenderID>F0</SenderID>
+    <MsgValue>35</MsgValue>
+    <MsgName>GIT_Hash_Command</MsgName>
+    <PackLen>06</PackLen>
+    <DataNames />
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+
+  <Commands>
+    <SearchTag>F0:80:A5</SearchTag>
+    <TargetID>F0</TargetID>
+    <SenderID>80</SenderID>
+    <MsgValue>A5</MsgValue>
+    <MsgName>GIT_Hash_Report</MsgName>
+    <PackLen>26</PackLen>
+    <DataNames>ascii git hash (build) string</DataNames>
+    <DataTypes>string</DataTypes>
+    <DataSizes>64</DataSizes>
+    <DataDetails>64 bytes</DataDetails>
+    <DefaultData>00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00</DefaultData>
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <Commands>
+    <SearchTag>80:F0:31</SearchTag>
+    <TargetID>80</TargetID>
+    <SenderID>F0</SenderID>
+    <MsgValue>31</MsgValue>
+    <MsgName>Reset</MsgName>
+    <PackLen>06</PackLen>
+    <DataNames />
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  
+  
+  <Commands>
+    <SearchTag>80:F0:06</SearchTag>
+    <TargetID>80</TargetID>
+    <SenderID>F0</SenderID>
+    <MsgValue>06</MsgValue>
+    <MsgName>Status Command</MsgName>
+    <PackLen>06</PackLen>
+    <DataNames />
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>F0:80:81</SearchTag>
+    <TargetID>F0</TargetID>
+    <SenderID>80</SenderID>
+    <MsgValue>81</MsgValue>
+    <MsgName>Status_Report</MsgName>
+    <PackLen>10</PackLen>
+    <DataNames>pstat0,pstat1,pctrl,rctrl,ecbstat0,ecbstat1,ecbstat2,ecbstat3,ctlstat0,ctlstat1</DataNames>
+    <DataTypes>bitfield,bitfield,bitfield,bitfield,bitfield,bitfield,bitfield,bitfield,bitfield,bitfield</DataTypes>
+    <DataSizes>1,1,1,1,1,1,1,1,1,1</DataSizes>
+    <DataDetails>bit 0 = control states:
+bit 1 =   “  start=0;user=1;batt=2
+bit 2 =   “  ext=3;batcap=4;
+bit 3 =   “  shut=15
+bit 4 = thermal shutdown
+bit 5 = battery overvoltage
+bit 6 = battery overcurrent
+bit 7 = battery low voltage,bit 0 = ul shutdown
+bit 1 = spi rpm signal
+bit 2 = battery system enabled
+bit 3 = trickle charging
+bit 4 = sci timeout
+bit 5 = push button switch
+bit 6 = charging
+bit 7 = test mode,bit 0 = external on hold
+bit 1 = battery on hold
+bit 2 = charger enable
+bit 3 = battery voltage enable
+bit 4 = charge current on
+bit 5 = charge level on
+bit 6 = zero pedal and generator rpm
+bit 7 = manual flag,bit 0 = system enable
+bit 1 = flyback 24v disable
+bit 2 = boost disable
+bit 3 = tv enable
+bit 4 = erp shutdown
+bit 5 = system power
+bit 6 =   “  init=0;user=1;batt=2;
+bit 7 =   “  ext=3;battext=4,bit 0 = calibrating
+bit 1 = calibrate error
+bit 2 = configuration error
+bit 3 = saved data
+bit 4 = m1 position sensor error
+bit 5 = m2 position sensor error
+bit 6 = s08 comm
+bit 7 = stride detected,bit 0 = pushbutton state (0 = closed/pressed)
+bit 1 = pedal rpm switch
+bit 2 = m1 last position state
+bit 3 = m2 last position state
+bit 4 = vtv overvoltage
+bit 5 = LED no voltage error
+bit 6 = LED no current error
+bit 7 = vsys overvoltage,bit 0 = m1 diagnostic error
+bit 1 = m2 diagnostic error
+bit 2 = ma_accum max
+bit 3 = ma pwm max
+bit 4 = m1 unplugged
+bit 5 = m2 unplugged
+bit 6 = m1 overcurrent error
+bit 7 = m2 overcurrent error,bit 0 = m1 actual on
+bit 1 = m2 actual on
+bit 2 = failed standby (sticky on; clear on success)
+bit 3 = m1m2 enabled
+bit 4 = verp error
+bit 5 = verp actual on
+bit 6 = vsys switch actual on
+bit 7 = vsys buck actual on,bit 0 = n/u
+bit 1 = n/u
+bit 2 = n/u
+bit 3 = n/u
+bit 4 = n/u
+bit 5 = n/u
+bit 6 = n/u
+bit 7 = n/u,bit 0 = m1 power on
+bit 1 = batt_chrg_sw
+bit 2 = m1m2 direction
+bit 3 = m1m2 enable
+bit 4 = clear errors
+bit 5 = enable closed loop control
+bit 6 = standby wake (gpio26)
+bit 7 = manual mode</DataDetails>
+    <DefaultData>00,00,00,00,00,00,00,00,00,00</DefaultData>
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>80:F0:0C</SearchTag>
+    <TargetID>80</TargetID>
+    <SenderID>F0</SenderID>
+    <MsgValue>0C</MsgValue>
+    <MsgName>XVersion_Command</MsgName>
+    <PackLen>07</PackLen>
+    <DataNames>type</DataNames>
+    <DataTypes>byte</DataTypes>
+    <DataSizes>1</DataSizes>
+    <DataDetails>0 = app version
+1 = boot version
+other = s08 version</DataDetails>
+    <DefaultData>00</DefaultData>
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>F0:80:83</SearchTag>
+    <TargetID>F0</TargetID>
+    <SenderID>80</SenderID>
+    <MsgValue>83</MsgValue>
+    <MsgName>XVersion_Report</MsgName>
+    <PackLen>1E</PackLen>
+    <DataNames>type,ascii version string</DataNames>
+    <DataTypes>byte,string</DataTypes>
+    <DataSizes>1,23</DataSizes>
+    <DataDetails>0 = app version
+1 = boot version
+other = s08 version,23 bytes (not null terminated)</DataDetails>
+    <DefaultData>00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00</DefaultData>
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>80:F0:0D</SearchTag>
+    <TargetID>80</TargetID>
+    <SenderID>F0</SenderID>
+    <MsgValue>0D</MsgValue>
+    <MsgName>Version_Command</MsgName>
+    <PackLen>06</PackLen>
+    <DataNames />
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>F0:80:84</SearchTag>
+    <TargetID>F0</TargetID>
+    <SenderID>80</SenderID>
+    <MsgValue>84</MsgValue>
+    <MsgName>Version_Report</MsgName>
+    <PackLen>26</PackLen>
+    <DataNames>ascii version string</DataNames>
+    <DataTypes>string</DataTypes>
+    <DataSizes>32</DataSizes>
+    <DataDetails>32 bytes (null terminated)</DataDetails>
+    <DefaultData>00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00</DefaultData>
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>80:F0:25</SearchTag>
+    <TargetID>80</TargetID>
+    <SenderID>F0</SenderID>
+    <MsgValue>25</MsgValue>
+    <MsgName>Output Control Command</MsgName>
+    <PackLen>0C</PackLen>
+    <DataNames>pctrl,rctrl,ctlstat1,BATTpwm,HYBRIDpwm,BRAKEpwm</DataNames>
+    <DataTypes>bitfield,bitfield,bitfield,byte,byte,byte</DataTypes>
+    <DataSizes>1,1,1,1,1,1</DataSizes>
+    <DataDetails>bit 0 = external on hold
+bit 1 = battery on hold
+bit 2 = charger enable
+bit 3 = battery voltage enable
+bit 4 = charge current on
+bit 5 = charge level on
+bit 6 = zero pedal and generator rpm
+bit 7 = manual flag,bit 0 = system enable
+bit 1 = flyback 24v disable
+bit 2 = boost disable
+bit 3 = tv enable
+bit 4 = erp shutdown
+bit 5 = system power
+bit 6 =   “  init=0;user=1;batt=2;
+bit 7 =   “  ext=3;battext=4,bit 0 = m1 power on
+bit 1 = batt_chrg_sw
+bit 2 = m1m2 direction
+bit 3 = m1m2 enable
+bit 4 = clear errors
+bit 5 = enable closed loop control
+bit 6 = standby wake (gpio26)
+bit 7 = manual mode,0-100,0-100,0-100</DataDetails>
+    <DefaultData>00,00,00,00,00,00</DefaultData>
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>80:F0:1E:06</SearchTag>
+    <TargetID>80</TargetID>
+    <SenderID>F0</SenderID>
+    <MsgValue>1E</MsgValue>
+    <MsgName>Diagnostic_Command</MsgName>
+    <PackLen>06</PackLen>
+    <DataNames />
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>F0:80:85</SearchTag>
+    <TargetID>F0</TargetID>
+    <SenderID>80</SenderID>
+    <MsgValue>85</MsgValue>
+    <MsgName>Diagnostic_Report</MsgName>
+    <PackLen>39</PackLen>
+    <DataNames>pstat0,pstat1,pctrl,rctrl,ecbstat0,ecbstat1,ecbstat2,ecbstat3,ctlstat0,ctlstat1,m1_diag0,m1_diag1,m2_diag0,m2_diag1,consid,intflags,m1pos,m2pos,pedrpm,m1curr,m2curr,extvolt,dir hv avg,led 5v sns,jumper,basevolt,basecurr,brdtemp,inttemp,brakecurr,flybcurr,busvolt,flybvolt,genrpm,portb b15-b8,portb b7-b0,porta b31-b24,porta b23-b16,porta b15-b8,porta b7-b0,ebrake sns,watt ref,torque_ref_100x,watts calc,torque calc,iled current</DataNames>
+    <DataTypes>bitfield,bitfield,bitfield,bitfield,bitfield,bitfield,bitfield,bitfield,bitfield,bitfield,bitfield,bitfield,bitfield,bitfield,byte,bitfield,byte,byte,byte,byte,byte,byte,byte,byte,byte,byte,byte,byte,byte,byte,byte,byte,byte,word,bitfield,bitfield,bitfield,bitfield,bitfield,bitfield,byte,word,word,word,word,byte</DataTypes>
+    <DataSizes>1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,1,1,1,1,1,1,1,2,2,2,2,1</DataSizes>
+    <DataDetails>bit 0 = control states:
+bit 1 =   “  start=0;user=1;batt=2
+bit 2 =   “  ext=3;batcap=4;
+bit 3 =   “  shut=15
+bit 4 = thermal shutdown
+bit 5 = battery overvoltage
+bit 6 = battery overcurrent
+bit 7 = battery low voltage,bit 0 = ul shutdown
+bit 1 = spi rpm signal
+bit 2 = battery system enabled
+bit 3 = trickle charging
+bit 4 = sci timeout
+bit 5 = push button switch
+bit 6 = charging
+bit 7 = test mode,bit 0 = external on hold
+bit 1 = battery on hold
+bit 2 = charger enable
+bit 3 = battery voltage enable
+bit 4 = charge current on
+bit 5 = charge level on
+bit 6 = zero pedal and generator rpm
+bit 7 = manual flag,bit 0 = system enable
+bit 1 = flyback 24v disable
+bit 2 = boost disable
+bit 3 = tv enable
+bit 4 = erp shutdown
+bit 5 = system power
+bit 6 =   “  init=0;user=1;batt=2;
+bit 7 =   “  ext=3;battext=4,bit 0 = calibrating
+bit 1 = calibrate error
+bit 2 = configuration error
+bit 3 = saved data
+bit 4 = m1 position sensor error
+bit 5 = m2 position sensor error
+bit 6 = s08 comm
+bit 7 = stride detected,bit 0 = pushbutton state (0 = closed/pressed)
+bit 1 = pedal rpm switch
+bit 2 = m1 last position state
+bit 3 = m2 last position state
+bit 4 = vtv overvoltage
+bit 5 = verp short
+bit 6 = vsys short
+bit 7 = vsys overvoltage,bit 0 = m1 diagnostic error
+bit 1 = m2 diagnostic error
+bit 2 = ma_accum max
+bit 3 = ma pwm max
+bit 4 = m1 unplugged
+bit 5 = m2 unplugged
+bit 6 = m1 overcurrent error
+bit 7 = m2 overcurrent error,bit 0 = m1 actual on
+bit 1 = m2 actual on
+bit 2 = failed standby (sticky on; clear on success)
+bit 3 = m1m2 enabled
+bit 4 = verp error
+bit 5 = verp actual on
+bit 6 = vsys switch actual on
+bit 7 = vsys buck actual on,bit 0 = n/u
+bit 1 = n/u
+bit 2 = n/u
+bit 3 = n/u
+bit 4 = n/u
+bit 5 = n/u
+bit 6 = n/u
+bit 7 = n/u,bit 0 = m1 power on
+bit 1 = batt_chrg_sw
+bit 2 = m1m2 direction
+bit 3 = m1m2 enable
+bit 4 = clear errors
+bit 5 = enable closed loop control
+bit 6 = standby wake (gpio26)
+bit 7 = manual mode,bit 0 = over-current on low side 1
+bit 1 = over-current on low side 2
+bit 2 = over-current on high side 1
+bit 3 = over-current on high side 2
+bit 4 = null
+bit 5 = null
+bit 6 = short to GND in OFF condition
+bit 7 = short to Battery in OFF condition,bit 0 = open load in OFF condition
+bit 1 = open load in ON condition
+bit 2 = Vs under-voltage
+bit 3 = Vdd over-voltage
+bit 4 = current limit
+bit 5 = temperature warning
+bit 6 = over-temperature shutdown
+bit 7 = bridge enable,bit 0 = over-current on low side 1
+bit 1 = over-current on low side 2
+bit 2 = over-current on high side 1
+bit 3 = over-current on high side 2
+bit 4 = null
+bit 5 = null
+bit 6 = short to GND in OFF condition
+bit 7 = short to Battery in OFF condition,bit 0 = open load in OFF condition
+bit 1 = open load in ON condition
+bit 2 = Vs under-voltage
+bit 3 = Vdd over-voltage
+bit 4 = current limit
+bit 5 = temperature warning
+bit 6 = over-temperature shutdown
+bit 7 = bridge enable,console id sense (.1ma),bit 0 = ul shutdown
+bit 1 = icid_first
+bit 2 = n/u
+bit 3 = ptech actuator
+bit 4 = Hercules console
+bit 5 = discover console
+bit 6 = explore console
+bit 7 = console id error,motor1 raw position,motor2 raw position,pedal rpm (0-255),m1 current (.1a),m2 current (.1a),external voltage (.1v),battery voltage (.1v),battery current (.02a),jumper a/d (0-255),base voltage (.1v),base current (.1a),board temperature (c),internal temperature (c),brake current (.02a),flyback current (.005a),bus voltage (2v),flyback voltage (.1v),generator rpm,GPIO32
+GPIO33
+GPIO34
+GPIO35
+GPIO36
+GPIO37
+GPIO38
+GPIO39,GPIO40
+reserved
+GPIO42
+reserved2_1
+reserved2_2
+reserved2_3
+reserved2_4
+reserved2_5,bit 0 - GPIO24
+bit 1 - GPIO25 (VERP_S/D)
+bit 2 - GPIO26 (Led6)
+bit 3 - GPIO27 (BATT_ON_HOLD)
+bit 4 - GPIO28 
+bit 5 - GPIO29
+bit 6 - GPIO30
+bit 7 - GPIO31 (VTV_EN),bit 0 - GPIO16
+bit 1 - GPIO17
+bit 2 - GPIO18
+bit 3 - GPIO19
+bit 4 - GPIO20
+bit 5 - GPIO21
+bit 6 - GPIO22
+bit 7 - GPIO23,bit 0 - GPIO8
+bit 1 - GPIO9
+bit 2 - GPIO10
+bit 3 - GPIO11
+bit 4 - GPIO12
+bit 5 - GPIO13
+bit 6 - GPIO14
+bit 7 - GPIO15,bit 0 - GPIO0
+bit 1 - GPIO1
+bit 2 - GPIO2
+bit 3 - GPIO3
+bit 4 - GPIO4
+bit 5 - GPIO5
+bit 6 - GPIO6
+bit 7 - GPIO7,charger state:
+Chk_Chrg=0
+High_Chrg=1
+Trkl_Chrg=2
+Chk_4Batt=3
+Null_Chk=4
+Null_Chk_Wait=5
+Null_Chk_Fin=6
+Chrg_Off=15,target from console,base calculated target,bit 0 - gen_type_detected
+bit 1 - bGenChanged
+bit 2 - n/u
+bit 3 - n/u
+bit 4 - n/u
+bit 5 - n/u
+bit 6 - n/u
+bit 7 - n/u</DataDetails>
+    <DefaultData>00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00</DefaultData>
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>80:F0:20</SearchTag>
+    <TargetID>80</TargetID>
+    <SenderID>F0</SenderID>
+    <MsgValue>20</MsgValue>
+    <MsgName>Accumulated_Data_Command</MsgName>
+    <PackLen>08</PackLen>
+    <DataNames>address,action</DataNames>
+    <DataTypes>byte,byte</DataTypes>
+    <DataSizes>1,1</DataSizes>
+    <DataDetails>data address in eeprom,0 = read
+1 = read and clear
+2 = clear all</DataDetails>
+    <DefaultData>00,00</DefaultData>
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>F0:80:87</SearchTag>
+    <TargetID>F0</TargetID>
+    <SenderID>80</SenderID>
+    <MsgValue>87</MsgValue>
+    <MsgName>Accumulated_Data_Report</MsgName>
+    <PackLen>0C</PackLen>
+    <DataNames>status,address,data</DataNames>
+    <DataTypes>byte,byte,long</DataTypes>
+    <DataSizes>1,1,4</DataSizes>
+    <DataDetails>0 = no read or not valid
+1 = good data read,data address in eeprom,data value</DataDetails>
+    <DefaultData>00,00,00,00,00,00</DefaultData>
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>80:F0:22</SearchTag>
+    <TargetID>80</TargetID>
+    <SenderID>F0</SenderID>
+    <MsgValue>22</MsgValue>
+    <MsgName>Read_Serial_Command</MsgName>
+    <PackLen>06</PackLen>
+    <DataNames />
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>80:F0:29</SearchTag>
+    <TargetID>80</TargetID>
+    <SenderID>F0</SenderID>
+    <MsgValue>29</MsgValue>
+    <MsgName>Write_Serial_Command</MsgName>
+    <PackLen>26</PackLen>
+    <DataNames>ascii serial number</DataNames>
+    <DataTypes>string</DataTypes>
+    <DataSizes>32</DataSizes>
+    <DataDetails>32 bytes max</DataDetails>
+    <DefaultData>00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00</DefaultData>
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>F0:80:89</SearchTag>
+    <TargetID>F0</TargetID>
+    <SenderID>80</SenderID>
+    <MsgValue>89</MsgValue>
+    <MsgName>Serial_Report</MsgName>
+    <PackLen>26</PackLen>
+    <DataNames>ascii serial number</DataNames>
+    <DataTypes>string</DataTypes>
+    <DataSizes>32</DataSizes>
+    <DataDetails>32 bytes</DataDetails>
+    <DefaultData>00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00</DefaultData>
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>80:F0:1B</SearchTag>
+    <TargetID>80</TargetID>
+    <SenderID>F0</SenderID>
+    <MsgValue>1B</MsgValue>
+    <MsgName>Msg_PH_BattCapInit</MsgName>
+    <PackLen>06</PackLen>
+    <DataNames />
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>80:F0:1C</SearchTag>
+    <TargetID>80</TargetID>
+    <SenderID>F0</SenderID>
+    <MsgValue>1C</MsgValue>
+    <MsgName>Msg_PH_BattCap_Request</MsgName>
+    <PackLen>06</PackLen>
+    <DataNames />
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>F0:80:82</SearchTag>
+    <TargetID>F0</TargetID>
+    <SenderID>80</SenderID>
+    <MsgValue>82</MsgValue>
+    <MsgName>Msg_PH_BattCap_Report</MsgName>
+    <PackLen>0A</PackLen>
+    <DataNames>status0,status1,batt voltage,batt resistance</DataNames>
+    <DataTypes>bitfield,bitfield,byte,byte</DataTypes>
+    <DataSizes>1,1,1,1</DataSizes>
+    <DataDetails>bit 0 = state: 0=Initialize;
+bit 1 = 1=User Power; 2=Battery Power
+bit 2 = 3=External Power; 4=Battery
+bit 3 = Capacity Check; 15=Shutdown
+bit 4 = thermal shutdown
+bit 5 = over-voltage
+bit 6 = current fault
+bit 7 = under-volt,bit 0 = ul shutdown
+bit 1 = program flash good
+bit 2 = charger disabled
+bit 3 = trickle charge
+bit 4 = serial comm timeout
+bit 5 = push-button switch
+bit 6 = battery charging
+bit 7 = test mode,0.1v,0.01Ω</DataDetails>
+    <DefaultData>00,00,00,00</DefaultData>
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>80:F0:21</SearchTag>
+    <TargetID>80</TargetID>
+    <SenderID>F0</SenderID>
+    <MsgValue>21</MsgValue>
+    <MsgName>Standby_Command</MsgName>
+    <PackLen>07</PackLen>
+    <DataNames>mode</DataNames>
+    <DataTypes>byte</DataTypes>
+    <DataSizes>1</DataSizes>
+    <DataDetails>0 = FULL
+1 = ERP
+2 = IDLE (only use ERP)</DataDetails>
+    <DefaultData>00</DefaultData>
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>80:F0:19</SearchTag>
+    <TargetID>80</TargetID>
+    <SenderID>F0</SenderID>
+    <MsgValue>19</MsgValue>
+    <MsgName>UL60730_Command</MsgName>
+    <PackLen>07</PackLen>
+    <DataNames>action</DataNames>
+    <DataTypes>byte</DataTypes>
+    <DataSizes>1</DataSizes>
+    <DataDetails>0 = read data
+!0 = read data then erase flags (after returning)</DataDetails>
+    <DefaultData>00</DefaultData>
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>F0:80:8F</SearchTag>
+    <TargetID>F0</TargetID>
+    <SenderID>80</SenderID>
+    <MsgValue>8F</MsgValue>
+    <MsgName>UL60730_Report</MsgName>
+    <PackLen>1C</PackLen>
+    <DataNames>ulflags0,ulflags1,cop time,min main-loop,max a/d time,a/d int per 25ms,5ms per a/d int,min main-loops,pc test,register test,ram tests,flash crc tests</DataNames>
+    <DataTypes>bitfield,bitfield,word,word,word,word,word,word,word,word,word,word</DataTypes>
+    <DataSizes>1,1,2,2,2,2,2,2,2,2,2,2</DataSizes>
+    <DataDetails>bit 0 = n/u
+bit 1 = sequence test error
+bit 2 = a/d null out of range error
+bit 3 = cop test failed
+bit 4 = main-loop 25ms. count error
+bit 5 = n/u
+bit 6 = n/u
+bit 7 = n/u,bit 0 = flash crc test failure
+bit 1 = ram test failed
+bit 2 = register test failed
+bit 3 = program counter test failed
+bit 4 = n/u
+bit 5 = a/d interrupt count error
+bit 6 = 5ms. timer error
+bit 7 = main-loop loop count error,counts @ 40mhz,minimum main loops per 25ms,maximum time for the a/d interrupt to execute,amount of interrupts per 25ms,amount of 5ms int per 25ms,minimum main loop loops per 10ms,fail code,fail code,amount of tests run,amount of tests run</DataDetails>
+    <DefaultData>00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00</DefaultData>
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>80:F0:2F</SearchTag>
+    <TargetID>80</TargetID>
+    <SenderID>F0</SenderID>
+    <MsgValue>2F</MsgValue>
+    <MsgName>Change_Baud_Rate_Command</MsgName>
+    <PackLen>07</PackLen>
+    <DataNames>baud</DataNames>
+    <DataTypes>byte</DataTypes>
+    <DataSizes>1</DataSizes>
+    <DataDetails>0x00 = do nothing
+0x01 = 9600 baud
+0x02 = 28.8K baud
+0x03 = 28.4K baud
+0x04 = 57.6K baud</DataDetails>
+    <DefaultData>00</DefaultData>
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>F0:80:95</SearchTag>
+    <TargetID>F0</TargetID>
+    <SenderID>80</SenderID>
+    <MsgValue>95</MsgValue>
+    <MsgName>Change_Baud_Rate_Report</MsgName>
+    <PackLen>07</PackLen>
+    <DataNames>baud</DataNames>
+    <DataTypes>byte</DataTypes>
+    <DataSizes>1</DataSizes>
+    <DataDetails>baud command echo</DataDetails>
+    <DefaultData>00</DefaultData>
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>80:F0:30</SearchTag>
+    <TargetID>80</TargetID>
+    <SenderID>F0</SenderID>
+    <MsgValue>30</MsgValue>
+    <MsgName>Temp_Address_Command</MsgName>
+    <PackLen>08</PackLen>
+    <DataNames>address,count</DataNames>
+    <DataTypes>byte,byte</DataTypes>
+    <DataSizes>1,1</DataSizes>
+    <DataDetails>treat this address like a device address,allow the temporary address this many times</DataDetails>
+    <DefaultData>00,00</DefaultData>
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>F0:80:96</SearchTag>
+    <TargetID>F0</TargetID>
+    <SenderID>80</SenderID>
+    <MsgValue>96</MsgValue>
+    <MsgName>Temp Address_Report</MsgName>
+    <PackLen>08</PackLen>
+    <DataNames>address,times</DataNames>
+    <DataTypes>byte,byte</DataTypes>
+    <DataSizes>1,1</DataSizes>
+    <DataDetails>address echo,count echo</DataDetails>
+    <DefaultData>00,00</DefaultData>
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>80:F0:2D:b</SearchTag>
+    <TargetID>80</TargetID>
+    <SenderID>F0</SenderID>
+    <MsgValue>2D</MsgValue>
+    <MsgName>Boot_Code Command</MsgName>
+    <PackLen>06</PackLen>
+    <DataNames />
+    <IsBootModeCmd>True</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>F0:80:9F</SearchTag>
+    <TargetID>F0</TargetID>
+    <SenderID>80</SenderID>
+    <MsgValue>9F</MsgValue>
+    <MsgName>Command_Not_Recognized</MsgName>
+    <PackLen>06</PackLen>
+    <DataNames />
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>80:f0:e0</SearchTag>
+    <TargetID>80</TargetID>
+    <SenderID>f0</SenderID>
+    <MsgValue>e0</MsgValue>
+    <MsgName>GC_Data_Request</MsgName>
+    <PackLen>06</PackLen>
+    <DataNames />
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>F0:80:e0</SearchTag>
+    <TargetID>F0</TargetID>
+    <SenderID>80</SenderID>
+    <MsgValue>e0</MsgValue>
+    <MsgName>GC_Data_Report</MsgName>
+    <PackLen>12</PackLen>
+    <DataNames>AD input current,AD bus voltage,n/u1,AD brake current,generator RPM,avg pedal RPM,instant pedal RPM</DataNames>
+    <DataTypes>word,word,word,word,word,byte,byte</DataTypes>
+    <DataSizes>2,2,2,2,2,1,1</DataSizes>
+    <DataDetails>current,voltage,not used,,,,</DataDetails>
+    <DefaultData>00,00,00,00,00,00,00,00,00,00,00,00</DefaultData>
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>80:f0:e1</SearchTag>
+    <TargetID>80</TargetID>
+    <SenderID>f0</SenderID>
+    <MsgValue>e1</MsgValue>
+    <MsgName>GC_Brake_PWM</MsgName>
+    <PackLen>0A</PackLen>
+    <DataNames>brake current PWM,battery charge PWM</DataNames>
+    <DataTypes>word,word</DataTypes>
+    <DataSizes>2,2</DataSizes>
+    <DataDetails>duty cycle,duty cycle</DataDetails>
+    <DefaultData>00,00,00,00</DefaultData>
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>F0:80:e1</SearchTag>
+    <TargetID>F0</TargetID>
+    <SenderID>80</SenderID>
+    <MsgValue>e1</MsgValue>
+    <MsgName>GC_Status_Report</MsgName>
+    <PackLen>07</PackLen>
+    <DataNames>status byte</DataNames>
+    <DataTypes>bitfield</DataTypes>
+    <DataSizes>1</DataSizes>
+    <DataDetails>bit 0 = external power detection
+bit 1 = over current detection
+bit 2 = over voltage detection
+bit 3 = over temperature detection
+bit 4 = GBC comm. breakdown
+bit 5 = rev. E GBC indicator
+bit 6 = brake current clamp indicator
+bit 7 = GBC reset indicator</DataDetails>
+    <DefaultData>00</DefaultData>
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>80:f0:e4</SearchTag>
+    <TargetID>80</TargetID>
+    <SenderID>f0</SenderID>
+    <MsgValue>e4</MsgValue>
+    <MsgName>GC_Brake_PWM_New</MsgName>
+    <PackLen>0A</PackLen>
+    <DataNames>brake current PWM,battery charge PWM</DataNames>
+    <DataTypes>word,word</DataTypes>
+    <DataSizes>2,2</DataSizes>
+    <DataDetails>duty cycle,duty cycle</DataDetails>
+    <DefaultData>00,00,00,00</DefaultData>
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>F0:80:e4</SearchTag>
+    <TargetID>F0</TargetID>
+    <SenderID>80</SenderID>
+    <MsgValue>e4</MsgValue>
+    <MsgName>GC_Status_Report_New</MsgName>
+    <PackLen>09</PackLen>
+    <DataNames>status byte,status byte2,status byte3</DataNames>
+    <DataTypes>bitfield,bitfield,bitfield</DataTypes>
+    <DataSizes>1,1,1</DataSizes>
+    <DataDetails>bit 0 = external power detection
+bit 1 = over current detection
+bit 2 = over voltage detection
+bit 3 = over temperature detection
+bit 4 = GBC comm. breakdown
+bit 5 = rev. E GBC indicator
+bit 6 = brake current clamp indicator
+bit 7 = GBC reset indicator,bit 0 = Generator direction status
+bit 1 = Sidewinder indicator
+bit 2 = ESaver enabled status
+bit 3 = reserved
+bit 4 = reserved
+bit 5 = reserved
+bit 6 = reserved
+bit 7 = reserved,bit 0 = reserved
+bit 1 = reserved
+bit 2 = reserved
+bit 3 = reserved
+bit 4 = reserved
+bit 5 = reserved
+bit 6 = reserved
+bit 7 = reserved</DataDetails>
+    <DefaultData>00,00,00</DefaultData>
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>80:f0:e5</SearchTag>
+    <TargetID>80</TargetID>
+    <SenderID>f0</SenderID>
+    <MsgValue>e5</MsgValue>
+    <MsgName>GC_Expanded_Config</MsgName>
+    <PackLen>13</PackLen>
+    <DataNames>bypass error handler,ESaver RPM high,ESaver RPM low,TestComm  flag,n/u1,n/u2,n/u3,n/u4</DataNames>
+    <DataTypes>byte,word,word,byte,byte,word,word,word</DataTypes>
+    <DataSizes>1,2,2,1,1,2,2,2</DataSizes>
+    <DataDetails>1 for bypassing GBC error handlers
+0 for allowing GBC error handlers,GBC ESaver RPM threshold high,GBC ESaver RPM threshold low,Test Comm Active flag,not used,not used,not used,not used</DataDetails>
+    <DefaultData>00,00,00,00,00,00,00,00,00,00,00,00,00</DefaultData>
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>F0:80:e5</SearchTag>
+    <TargetID>F0</TargetID>
+    <SenderID>80</SenderID>
+    <MsgValue>e5</MsgValue>
+    <MsgName>GC_Generic_Ack</MsgName>
+    <PackLen>06</PackLen>
+    <DataNames />
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>80:f0:e7</SearchTag>
+    <TargetID>80</TargetID>
+    <SenderID>f0</SenderID>
+    <MsgValue>e7</MsgValue>
+    <MsgName>GC_Watts_Torque</MsgName>
+    <PackLen>0F</PackLen>
+    <DataNames>option1,target value,hybrid_control,product_type,actuator level,bw_ratio,workout level</DataNames>
+    <DataTypes>byte,word,byte,byte,byte,word,byte</DataTypes>
+    <DataSizes>1,2,1,1,1,2,1</DataSizes>
+    <DataDetails>0 = target watts (constant power - rpm independent)
+1 = target torque (100x ft-lbs)
+2 = normalized watts (race mode
+rpm dependend Bikes/Cross-Trainers)
+3 = adaptive power (torque based race mode
+rpm dependend )
+4 = isokinetic mode (constant speed
+not supported
+placeholder),user torque or watts target (torque is 100x
+e.g. 473 =  473/100 = 4.73 ft-lbs),0 = hybrid control disabled
+!0 = hybrid control enabled,11 = upright bike
+12 = bike
+16 = cross-trainer
+19 = flex strider
+23 = arc trainer
+26 = Hybrid bike (Everest),target level for Cross Trainer
+range = 0 - 15,User's Body Weight ratio for Arc trainer torque equation (used when spm &gt; 160). Range is 0 to 1 in 1000x (e.g. 300 = 300/1000 = 0.300),target level
+range = 1 - 25 (upright and rec bikes and XT) 
+range 1 - 99 hybrid bike</DataDetails>
+    <DefaultData>00,00,00,00,17,00,00,00,00</DefaultData>
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>F0:80:e7</SearchTag>
+    <TargetID>F0</TargetID>
+    <SenderID>80</SenderID>
+    <MsgValue>e7</MsgValue>
+    <MsgName>GC_Watts_Torque_Report</MsgName>
+    <PackLen>0E</PackLen>
+    <DataNames>torque,watts,status byte,status byte2,status byte3,actuator_level</DataNames>
+    <DataTypes>word,word,bitfield,bitfield,bitfield,byte</DataTypes>
+    <DataSizes>2,2,1,1,1,1</DataSizes>
+    <DataDetails>generator torque (100x instantaneous value
+in in-lbs. Takes into account torque tare and drive ratio),averaged wattage (displayed in console),bit 0 = external power detection
+bit 1 = over current detection
+bit 2 = over voltage detection
+bit 3 = over temperature detection
+bit 4 = GBC comm. breakdown
+bit 5 = rev. E GBC indicator
+bit 6 = brake current clamp indicator
+bit 7 = GBC reset indicator,bit 0 = Generator direction status
+bit 1 = Sidewinder indicator
+bit 2 = ESaver enabled status
+bit 3 = reserved
+bit 4 = reserved
+bit 5 = reserved
+bit 6 = reserved
+bit 7 = reserved,bit 0 = reserved
+bit 1 = reserved
+bit 2 = reserved
+bit 3 = reserved
+bit 4 = reserved
+bit 5 = reserved
+bit 6 = reserved
+bit 7 = reserved,</DataDetails>
+    <DefaultData>00,00,00,00,00,00,00,00</DefaultData>
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>80:f0:e9</SearchTag>
+    <TargetID>80</TargetID>
+    <SenderID>f0</SenderID>
+    <MsgValue>e9</MsgValue>
+    <MsgName>GC_Data_Exchange</MsgName>
+    <PackLen>0E</PackLen>
+    <DataNames>console current,console voltage,option,n/u1,n/u2</DataNames>
+    <DataTypes>word,word,byte,byte,word</DataTypes>
+    <DataSizes>2,2,1,1,2</DataSizes>
+    <DataDetails>current,voltage,1 = FB_RaceMode,not used,not used</DataDetails>
+    <DefaultData>00,00,00,00,00,00,00,00</DefaultData>
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>80:F0:01</SearchTag>
+    <TargetID>80</TargetID>
+    <SenderID>F0</SenderID>
+    <MsgValue>01</MsgValue>
+    <MsgName>TE_Null_Command</MsgName>
+    <PackLen>06</PackLen>
+    <DataNames />
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>80:F0:07</SearchTag>
+    <TargetID>80</TargetID>
+    <SenderID>F0</SenderID>
+    <MsgValue>07</MsgValue>
+    <MsgName>TE_TTL_Loopback_Command</MsgName>
+    <PackLen>06</PackLen>
+    <DataNames />
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>F0:80:8A</SearchTag>
+    <TargetID>F0</TargetID>
+    <SenderID>80</SenderID>
+    <MsgValue>8A</MsgValue>
+    <MsgName>TE_Normal Report</MsgName>
+    <PackLen>1E</PackLen>
+    <DataNames>pstat0,pstat1,pctrl,rctrl,ecbstat0,ecbstat1,ecbstat2,ecbstat3,ctlstat0,ctlstat1,teflags0,teflags1,portb b15-b8,portb b7-b0,porta b31-b24,porta b23-b16,porta b15-b8,porta b7-b0,extvolt,basevolt,flybvolt</DataNames>
+    <DataTypes>bitfield,bitfield,bitfield,bitfield,bitfield,bitfield,bitfield,bitfield,bitfield,bitfield,bitfield,bitfield,bitfield,bitfield,bitfield,bitfield,bitfield,bitfield,word,word,word</DataTypes>
+    <DataSizes>1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2</DataSizes>
+    <DataDetails>bit 0 = control states:
+bit 1 =   “  start=0;user=1;batt=2
+bit 2 =   “  ext=3;batcap=4;
+bit 3 =   “  shut=15
+bit 4 = thermal shutdown
+bit 5 = battery overvoltage
+bit 6 = battery overcurrent
+bit 7 = battery low voltage,bit 0 = ul shutdown
+bit 1 = spi rpm signal
+bit 2 = battery system enabled
+bit 3 = trickle charging
+bit 4 = sci timeout
+bit 5 = push button switch
+bit 6 = charging
+bit 7 = test mode,bit 0 = external on hold
+bit 1 = battery on hold
+bit 2 = charger enable
+bit 3 = battery voltage enable
+bit 4 = charge current on
+bit 5 = charge level on
+bit 6 = zero pedal and generator rpm
+bit 7 = manual flag,bit 0 = system enable
+bit 1 = flyback 24v disable
+bit 2 = boost disable
+bit 3 = tv enable
+bit 4 = erp shutdown
+bit 5 = system power
+bit 6 =   “  init=0;user=1;batt=2;
+bit 7 =   “  ext=3;battext=4,bit 0 = calibrating
+bit 1 = calibrate error
+bit 2 = configuration error
+bit 3 = saved data
+bit 4 = m1 position sensor error
+bit 5 = m2 position sensor error
+bit 6 = s08 comm
+bit 7 = stride detected,bit 0 = pushbutton state (0 = closed/pressed)
+bit 1 = pedal rpm switch
+bit 2 = m1 last position state
+bit 3 = m2 last position state
+bit 4 = vtv overvoltage
+bit 5 = verp short
+bit 6 = vsys short
+bit 7 = vsys overvoltage,bit 0 = m1 diagnostic error
+bit 1 = m2 diagnostic error
+bit 2 = ma_accum max
+bit 3 = ma pwm max
+bit 4 = m1 unplugged
+bit 5 = m2 unplugged
+bit 6 = m1 overcurrent error
+bit 7 = m2 overcurrent error,bit 0 = m1 actual on
+bit 1 = m2 actual on
+bit 2 = failed standby (sticky on; clear on success)
+bit 3 = m1m2 enabled
+bit 4 = verp error
+bit 5 = verp actual on
+bit 6 = vsys switch actual on
+bit 7 = vsys buck actual on,bit 0 = n/u
+bit 1 = n/u
+bit 2 = n/u
+bit 3 = n/u
+bit 4 = n/u
+bit 5 = n/u
+bit 6 = n/u
+bit 7 = n/u,bit 0 = m1 power on
+bit 1 = batt_chrg_sw
+bit 2 = m1m2 direction
+bit 3 = m1m2 enable
+bit 4 = clear errors
+bit 5 = enable closed loop control
+bit 6 = standby wake (gpio26)
+bit 7 = manual mode,bit 0 = eeprom test failed
+bit 1 = n/u
+bit 2 = n/u
+bit 3 = n/u
+bit 4 = n/u
+bit 5 = n/u
+bit 6 = n/u
+bit 7 = n/u,bit 0 = test end ttl general loopback error
+bit 1 = n/u
+bit 2 = n/u
+bit 3 = n/u
+bit 4 = test eng ttl loopback 9600 baud fail
+bit 5 = test eng ttl loopback 28.8K baud fail
+bit 6 = test eng ttl loopback 115.2K baud fail
+bit 7 = test eng test complete,GPIO32
+GPIO33
+GPIO34
+GPIO35
+GPIO36
+GPIO37
+GPIO38
+GPIO39,GPIO40
+reserved
+GPIO42
+reserved2_1
+reserved2_2
+reserved2_3
+reserved2_4
+reserved2_5,bit 0 - GPIO24
+bit 1 - GPIO25 (VERP_S/D)
+bit 2 - GPIO26 (Led6)
+bit 3 - GPIO27 (BATT_ON_HOLD)
+bit 4 - GPIO28 
+bit 5 - GPIO29
+bit 6 - GPIO30
+bit 7 - GPIO31 (VTV_EN),bit 0 - GPIO16
+bit 1 - GPIO17
+bit 2 - GPIO18
+bit 3 - GPIO19
+bit 4 - GPIO20
+bit 5 - GPIO21
+bit 6 - GPIO22
+bit 7 - GPIO23,bit 0 - GPIO8
+bit 1 - GPIO9
+bit 2 - GPIO10
+bit 3 - GPIO11
+bit 4 - GPIO12
+bit 5 - GPIO13
+bit 6 - GPIO14
+bit 7 - GPIO15,bit 0 - GPIO0
+bit 1 - GPIO1
+bit 2 - GPIO2
+bit 3 - GPIO3
+bit 4 - GPIO4
+bit 5 - GPIO5
+bit 6 - GPIO6
+bit 7 - GPIO7,external voltage(.1v),base voltage(.1v),flyback voltage(.1v)</DataDetails>
+    <DefaultData>00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00</DefaultData>
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>80:F0:2C</SearchTag>
+    <TargetID>80</TargetID>
+    <SenderID>F0</SenderID>
+    <MsgValue>2C</MsgValue>
+    <MsgName>TE_Store_Word_Command</MsgName>
+    <PackLen>0A</PackLen>
+    <DataNames>option,address,data</DataNames>
+    <DataTypes>byte,byte,word</DataTypes>
+    <DataSizes>1,1,2</DataSizes>
+    <DataDetails>0 = read
+1 = write
+2 = initialize (address must be 0),address offset of the operation (range = 0 - 7),data to be saved</DataDetails>
+    <DefaultData>00,00,00,00</DefaultData>
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>F0:80:93</SearchTag>
+    <TargetID>F0</TargetID>
+    <SenderID>80</SenderID>
+    <MsgValue>93</MsgValue>
+    <MsgName>TE_Store_Word_Report</MsgName>
+    <PackLen>0C</PackLen>
+    <DataNames>status,address,data,data checksum</DataNames>
+    <DataTypes>byte,byte,word,word</DataTypes>
+    <DataSizes>1,1,2,2</DataSizes>
+    <DataDetails>0 = valid read
+1 = valid write
+2 = valid initialization
+0xff = error,address offset of the operation (range = 0 - 7),data (n/a on writes),n/a on reads
+inverse bits of data word (for test purposes)</DataDetails>
+    <DefaultData>00,00,00,00,00,00</DefaultData>
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>40:F0:00</SearchTag>
+    <TargetID>40</TargetID>
+    <SenderID>F0</SenderID>
+    <MsgValue>00</MsgValue>
+    <MsgName>EE_Null_Request</MsgName>
+    <PackLen>06</PackLen>
+    <DataNames />
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>40:F0:03</SearchTag>
+    <TargetID>40</TargetID>
+    <SenderID>F0</SenderID>
+    <MsgValue>03</MsgValue>
+    <MsgName>EE_Status_Request</MsgName>
+    <PackLen>06</PackLen>
+    <DataNames />
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>40:F0:02</SearchTag>
+    <TargetID>40</TargetID>
+    <SenderID>F0</SenderID>
+    <MsgValue>02</MsgValue>
+    <MsgName>EE_Save_Request</MsgName>
+    <PackLen>29</PackLen>
+    <DataNames>save offset,byte count,data</DataNames>
+    <DataTypes>word,byte,bytes</DataTypes>
+    <DataSizes>2,1,32</DataSizes>
+    <DataDetails>offset address of data to be written,number of bytes to be saved,up to 32 bytes of data to be saved</DataDetails>
+    <DefaultData>00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00</DefaultData>
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>40:F0:04</SearchTag>
+    <TargetID>40</TargetID>
+    <SenderID>F0</SenderID>
+    <MsgValue>04</MsgValue>
+    <MsgName>EE_Sniff_Request</MsgName>
+    <PackLen>0A</PackLen>
+    <DataNames>begin offset,end offset</DataNames>
+    <DataTypes>word,word</DataTypes>
+    <DataSizes>2,2</DataSizes>
+    <DataDetails>offset address to begin test,offset address to end test at</DataDetails>
+    <DefaultData>00,00,00,00</DefaultData>
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>40:F0:05</SearchTag>
+    <TargetID>40</TargetID>
+    <SenderID>F0</SenderID>
+    <MsgValue>05</MsgValue>
+    <MsgName>EE_Fill_Request</MsgName>
+    <PackLen>0B</PackLen>
+    <DataNames>begin offset,size,fill value</DataNames>
+    <DataTypes>word,word,byte</DataTypes>
+    <DataSizes>2,2,1</DataSizes>
+    <DataDetails>offset address to begin fill,size in bytes to fill</DataDetails>
+    <DefaultData>00,00,00,00,00</DefaultData>
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>F0:40:80</SearchTag>
+    <TargetID>F0</TargetID>
+    <SenderID>40</SenderID>
+    <MsgValue>80</MsgValue>
+    <MsgName>EE_Status_Report</MsgName>
+    <PackLen>0A</PackLen>
+    <DataNames>ee_status0,ee_status1,ee_status2,ee_state</DataNames>
+    <DataTypes>bitfield,bitfield,bitfield,byte</DataTypes>
+    <DataSizes>1,1,1,1</DataSizes>
+    <DataDetails>bit 0 = read in progress
+bit 1 = write in progress
+bit 2 = no data error
+bit 3 = max. data error
+bit 4 = read finished
+bit 5 = write finished
+bit 6 = write verifying
+bit 7 = write good,bit 0 = unplugged
+bit 1 = test in progress
+bit 2 = sniff test complete
+bit 3 = sniff test good
+bit 4 = busy (ee_state != 0)
+bit 5 = immediate read indicator
+bit 6 = copying buffer
+bit 7 = read pending,bit 0 = timeout error
+bit 1 = critical error
+bit 2 = receive full error
+bit 3 = arbitrate error
+bit 4 = n/u
+bit 5 = n/u
+bit 6 = n/u
+bit 7 = clear eeprom flags (info),eeprom state or if error
+eeprom error state</DataDetails>
+    <DefaultData>00,00,00,00</DefaultData>
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>40:F0:01</SearchTag>
+    <TargetID>40</TargetID>
+    <SenderID>F0</SenderID>
+    <MsgValue>01</MsgValue>
+    <MsgName>EE_Read_Request</MsgName>
+    <PackLen>09</PackLen>
+    <DataNames>data offset,byte count</DataNames>
+    <DataTypes>word,byte</DataTypes>
+    <DataSizes>2,1</DataSizes>
+    <DataDetails>offset address of data,number of bytes to be read (max 32)</DataDetails>
+    <DefaultData>00,00,00</DefaultData>
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>F0:40:81</SearchTag>
+    <TargetID>F0</TargetID>
+    <SenderID>40</SenderID>
+    <MsgValue>81</MsgValue>
+    <MsgName>EE_Read_Report</MsgName>
+    <PackLen>28</PackLen>
+    <DataNames>ee_status0,ee_status1,data</DataNames>
+    <DataTypes>bitfield,bitfield,bytes</DataTypes>
+    <DataSizes>1,1,32</DataSizes>
+    <DataDetails>bit 0 = read in progress
+bit 1 = write in progress
+bit 2 = no data error
+bit 3 = max. data error
+bit 4 = read finished
+bit 5 = write finished
+bit 6 = write verifying
+bit 7 = write good,bit 0 = unplugged
+bit 1 = test in progress
+bit 2 = sniff test complete
+bit 3 = sniff test good
+bit 4 = busy (ee_state != 0)
+bit 5 = immediate read indicator
+bit 6 = copying buffer
+bit 7 = read pending,up to 32 bytes of data</DataDetails>
+    <DefaultData>00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00</DefaultData>
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>80:F0:06:b</SearchTag>
+    <TargetID>80</TargetID>
+    <SenderID>F0</SenderID>
+    <MsgValue>06</MsgValue>
+    <MsgName>BOOT_Null</MsgName>
+    <PackLen>06</PackLen>
+    <DataNames />
+    <IsBootModeCmd>True</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>80:F0:2A:b</SearchTag>
+    <TargetID>80</TargetID>
+    <SenderID>F0</SenderID>
+    <MsgValue>2A</MsgValue>
+    <MsgName>BOOT_Erase_Page</MsgName>
+    <PackLen>08</PackLen>
+    <DataNames>page address</DataNames>
+    <DataTypes>word</DataTypes>
+    <DataSizes>2</DataSizes>
+    <DataDetails>erasing occurs only @ address = 0
+the complete application space is erased</DataDetails>
+    <DefaultData>00,00</DefaultData>
+    <IsBootModeCmd>True</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>80:F0:2B:b</SearchTag>
+    <TargetID>80</TargetID>
+    <SenderID>F0</SenderID>
+    <MsgValue>2B</MsgValue>
+    <MsgName>BOOT_Program_Block</MsgName>
+    <PackLen>48</PackLen>
+    <DataNames>block address,data</DataNames>
+    <DataTypes>word,bytes</DataTypes>
+    <DataSizes>2,64</DataSizes>
+    <DataDetails>address of MC flash memory block to be programmed,64 bytes of program data</DataDetails>
+    <DefaultData>00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00</DefaultData>
+    <IsBootModeCmd>True</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>F0:80:91:b</SearchTag>
+    <TargetID>F0</TargetID>
+    <SenderID>80</SenderID>
+    <MsgValue>91</MsgValue>
+    <MsgName>BOOT_Flash_Update_Status</MsgName>
+    <PackLen>07</PackLen>
+    <DataNames>status</DataNames>
+    <DataTypes>byte</DataTypes>
+    <DataSizes>1</DataSizes>
+    <DataDetails>0 = ok
+0xFF=erasing
+other=error code</DataDetails>
+    <DefaultData>00</DefaultData>
+    <IsBootModeCmd>True</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>80:F0:0D:b</SearchTag>
+    <TargetID>80</TargetID>
+    <SenderID>F0</SenderID>
+    <MsgValue>0D</MsgValue>
+    <MsgName>BOOT_Version_Request</MsgName>
+    <PackLen>06</PackLen>
+    <DataNames />
+    <IsBootModeCmd>True</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>F0:80:84:b</SearchTag>
+    <TargetID>F0</TargetID>
+    <SenderID>80</SenderID>
+    <MsgValue>84</MsgValue>
+    <MsgName>BOOT_Version_Report</MsgName>
+    <PackLen>1D</PackLen>
+    <DataNames>version</DataNames>
+    <DataTypes>string</DataTypes>
+    <DataSizes>23</DataSizes>
+    <DataDetails>23 bytes</DataDetails>
+    <DefaultData>00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00</DefaultData>
+    <IsBootModeCmd>True</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>80:F0:29:b</SearchTag>
+    <TargetID>80</TargetID>
+    <SenderID>F0</SenderID>
+    <MsgValue>29</MsgValue>
+    <MsgName>BOOT_Read_Command</MsgName>
+    <PackLen>08</PackLen>
+    <DataNames>address</DataNames>
+    <DataTypes>word</DataTypes>
+    <DataSizes>2</DataSizes>
+    <DataDetails>code start address of block</DataDetails>
+    <DefaultData>00,00</DefaultData>
+    <IsBootModeCmd>True</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>F0:80:92:b</SearchTag>
+    <TargetID>F0</TargetID>
+    <SenderID>80</SenderID>
+    <MsgValue>92</MsgValue>
+    <MsgName>BOOT_Read Report</MsgName>
+    <PackLen>48</PackLen>
+    <DataNames>address,data</DataNames>
+    <DataTypes>word,words</DataTypes>
+    <DataSizes>2,64</DataSizes>
+    <DataDetails>code start address of block,32 words of code</DataDetails>
+    <DefaultData>00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00</DefaultData>
+    <IsBootModeCmd>True</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>80:F0:2C:b</SearchTag>
+    <TargetID>80</TargetID>
+    <SenderID>F0</SenderID>
+    <MsgValue>2C</MsgValue>
+    <MsgName>BOOT_Restart</MsgName>
+    <PackLen>06</PackLen>
+    <DataNames />
+    <IsBootModeCmd>True</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  <Commands>
+    <SearchTag>F0:80:9F:b</SearchTag>
+    <TargetID>F0</TargetID>
+    <SenderID>80</SenderID>
+    <MsgValue>9F</MsgValue>
+    <MsgName>BOOT_Command_Not_Recognized</MsgName>
+    <PackLen>06</PackLen>
+    <DataNames />
+    <IsBootModeCmd>True</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  
+  
+  
+
+  <Commands>
+    <SearchTag>F0:80:32</SearchTag>
+    <TargetID>80</TargetID>
+    <SenderID>F0</SenderID>
+    <MsgValue>32</MsgValue>
+    <MsgName>Misc_Config</MsgName>
+    <PackLen>0A</PackLen>
+    <DataNames>cflags0,cflags1,cflags2,cflags3</DataNames>
+    <DataTypes>bitfield,bitfield,bitfield,bitfield</DataTypes>
+    <DataSizes>1,1,1,1</DataSizes>
+    <DataDetails>bit 0 = clear errors
+bit 1 = n/u
+bit 2 = n/u
+bit 3 = n/u
+bit 4 = n/u
+bit 5 = n/u
+bit 6 = n/u
+bit 7 = n/u,bit 0 = n/u
+bit 1 = n/u
+bit 2 = n/u
+bit 3 = n/u
+bit 4 = n/u
+bit 5 = n/u
+bit 6 = n/u
+bit 7 = n/u,bit 0 = n/u
+bit 1 = n/u
+bit 2 = n/u
+bit 3 = n/u
+bit 4 = n/u
+bit 5 = n/u
+bit 6 = n/u
+bit 7 = n/u,bit 0 = n/u
+bit 1 = n/u
+bit 2 = n/u
+bit 3 = n/u
+bit 4 = n/u
+bit 5 = n/u
+bit 6 = n/u
+bit 7 = n/u</DataDetails>
+    <DefaultData>00,00,00,00</DefaultData>
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>  
+
+
+    <Commands>
+    <SearchTag>F0:80:0B</SearchTag>
+    <TargetID>80</TargetID>
+    <SenderID>F0</SenderID>
+    <MsgValue>0B</MsgValue>
+     <MsgName>LED Command (PNC)</MsgName>
+    <PackLen>30</PackLen>
+    <DataNames>select,time_sync,mode,effect period 1,color1,effect period 2,color2,effect period 3,color3,effect period 4,color4,effect period 5,color5,effect period 6,color6</DataNames>
+    <DataTypes>bitfield,long long,byte,word,bytes,word,bytes,word,bytes,word,bytes,word,bytes,word,bytes</DataTypes>
+    <DataSizes>1,8,1,2,3,2,3,2,3,2,3,2,3,2,3</DataSizes>
+    <DataDetails>bit 0 = left_deck 
+	bit 1 = right_deck
+	bit 2 = bug
+	bit 3 = motion ring
+	bit 4 = Service
+	bit 5 = handle bar
+	bit 6 = n/u
+	bit 7 = RGB code 1 = GRB 0 = RGB, milliseconds since start,0 = Off
+	1 = Solid On (color=led_color_1)
+	2 = Breath (color=led_color_1 - led_color2)
+	3 = Pulse (color=led_color_1 - led_color2)
+	4 = Wipe (color=led_color_1 - led_color2)
+	5 = Running (color=led_color_1 - led_color2)
+	6 = Fade to Off
+	7 = n/u,period for color 1 in milliseconds,RGB color values,period for color 2,RGB color values,period for color 3,RGB color values,period for color 4,RGB color values,period for color 5,RGB color values,period for color 6,RGB color values</DataDetails>
+    <DefaultData>00,00,00,00,00,00,00,00,00,00,00,00,FF,00,00,00,00,00,FF,00,00,00,00,00,FF,00,00,80,80,00,00,00,80,00,80,00,00,FF,FF,FF</DefaultData>
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>  
+  
+  
+  
+  
+
+  
+  
+  
+    <Commands>
+    <SearchTag>80:F0:40</SearchTag>
+    <TargetID>80</TargetID>
+    <SenderID>F0</SenderID>
+    <MsgValue>40</MsgValue>
+    <MsgName>CIC_Version_Command</MsgName>
+    <PackLen>06</PackLen>
+    <DataNames />
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+     <Commands>
+    <SearchTag>80:F0:41</SearchTag>
+    <TargetID>80</TargetID>
+    <SenderID>F0</SenderID>
+    <MsgValue>41</MsgValue>
+    <MsgName>CIC_Data_Command</MsgName>
+    <PackLen>06</PackLen>
+    <DataNames />
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  
+  
+  
+  
+  
+    <Commands>
+    <SearchTag>F0:80:40</SearchTag>
+    <TargetID>F0</TargetID>
+    <SenderID>80</SenderID>
+    <MsgValue>40</MsgValue>
+    <MsgName>CIC_Version_Report</MsgName>
+    <PackLen>10</PackLen>
+    <DataNames>sysid1,bootloaderver1,appver1,ctuid1,sysid2,bootver2,appver2,ctuid2</DataNames>
+    <DataTypes>word,word,word,word,word,word,word,word</DataTypes>
+    <DataSizes>2,2,2,2,2,2,2,2</DataSizes>
+    <DataDetails>SysID1=0xCA01,Bootloader version1=0x0204,App version1 = 0x0106,CtuID1 = 0x030C,SysID2 = 0xCA02,Bootloader version2=0x0204,App version2 = 0x0x0106,CtuID2 = 0x030C</DataDetails>
+    <DefaultData>00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00</DefaultData>
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  
+    
+    <Commands>
+    <SearchTag>F0:80:41</SearchTag>
+    <TargetID>F0</TargetID>
+    <SenderID>80</SenderID>
+    <MsgValue>41</MsgValue>
+    <MsgName>CIC_Data_Report</MsgName>
+    <PackLen>1B</PackLen>
+    <DataNames>position1,position2,amplitude1,amplitude2,rp16_1,rp16_2,rp32_1,rp32_2</DataNames>
+    <DataTypes>signed word,signed word,word,word,word,word,long,long</DataTypes>
+    <DataSizes>2,2,2,2,2,2,4,4</DataSizes>
+    <DataDetails>Postion1,Position2,Amp1,Amp2,RP16_1,RP16_2,RP32_1,RP32_2</DataDetails>
+    <DefaultData>00,00,00,00,00,00,00,00,00,00,00,</DefaultData>
+    <IsBootModeCmd>False</IsBootModeCmd>
+    <DuplicateCmd />
+    <CmdNotes />
+  </Commands>
+  
+  
+  
+  
+</NewDataSet>

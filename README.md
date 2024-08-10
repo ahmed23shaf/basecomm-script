@@ -25,7 +25,7 @@ make -v
 
 ## Usage
 
-To effectively create scripts using this program, a basic understanding of C/C++ programming (including objects, functions, and other fundamental concepts) is required. For a comprehensive guide on using the program and understanding XML message structures, please refer to the [documentation](https://bitbucket.org/lifefitnessstash/basecomm-script/src/master/docs/).  
+To effectively create scripts using this program, a basic understanding of C/C++ programming (including objects, functions, and other fundamental concepts) is required. For a comprehensive guide on using the program and understanding XML message structures, please refer to the [documentation]([https://bitbucket.org/lifefitnessstash/basecomm-script/src/master/docs/](https://github.com/ahmed23shaf/basecomm-script/blob/main/docs/Scriptable%20Base%20Comm%20Guide.pdf)).  
 A USB to RS422/RS485 COM cable is needed to be able send messages.  
 The following below is a quick start guide.
 
